@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niyanta Academy</title>
+  <style>
+    /* Reset */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;background:#f9fafc;color:#333;line-height:1.6;scroll-behavior:smooth;overflow-x:hidden}
+
+    /* Navbar */
+    header{position:fixed;width:100%;background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,0.1);z-index:1000;transition:.4s}
+    nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 20px}
+    nav h1{color:#2563eb;font-size:1.7rem;font-weight:700;letter-spacing:1px}
+    nav ul{display:flex;list-style:none}
+    nav ul li{margin-left:25px}
+    nav ul li a{text-decoration:none;font-weight:500;color:#333;transition:.3s}
+    nav ul li a:hover{color:#2563eb}
+
+    /* Hero */
+    .hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px;position:relative;overflow:hidden;background:linear-gradient(135deg,#2563eb,#4f46e5)}
+    .hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:url('https://www.transparenttextures.com/patterns/stardust.png');opacity:.15;animation:spin 80s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .hero h1{font-size:3rem;color:#fff;margin-bottom:15px;animation:fadeUp 1s ease-out forwards}
+    .hero p{font-size:1.2rem;color:#e0e7ff;margin-bottom:30px;opacity:0;animation:fadeUp 1s ease-out .5s forwards}
+    .btn{padding:14px 30px;background:#fff;color:#2563eb;font-weight:600;text-decoration:none;border-radius:30px;transition:.4s;opacity:0;animation:fadeUp 1s ease-out 1s forwards}
+    .btn:hover{background:#2563eb;color:#fff;transform:scale(1.1)}
+
+    @keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+
+    /* Sections */
+    section{padding:100px 20px;max-width:1200px;margin:auto}
+    section h2{text-align:center;font-size:2.2rem;margin-bottom:50px;position:relative;color:#111}
+    section h2::after{content:"";width:80px;height:4px;background:#2563eb;display:block;margin:12px auto 0;border-radius:4px}
+
+    /* About */
+    .about p{text-align:center;max-width:800px;margin:auto;font-size:1.15rem;color:#555;opacity:0;transform:translateY(40px);transition:.8s}
+
+    /* Courses */
+    .courses{background:#f0f4ff}
+    .course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+    .course{padding:25px;border-radius:20px;background:rgba(255,255,255,0.8);backdrop-filter:blur(15px);box-shadow:0 8px 20px rgba(0,0,0,0.1);text-align:center;transform:translateY(40px);opacity:0;transition:.8s}
+    .course h3{margin-bottom:12px;color:#2563eb;font-size:1.3rem}
+    .course p{color:#555}
+    .course:hover{transform:translateY(-10px) scale(1.05)}
+
+    /* Why Us */
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+    .why-item{padding:25px;border-radius:20px;background:#fff;box-shadow:0 8px 25px rgba(0,0,0,0.1);text-align:center;opacity:0;transform:scale(0.9);transition:.8s}
+    .why-item h3{margin-bottom:12px;color:#2563eb}
+    .why-item p{color:#555}
+    .why-item:hover{transform:scale(1.05)}
+
+    /* Contact */
+    .contact form{display:grid;gap:15px;max-width:600px;margin:auto;opacity:0;transform:translateY(40px);transition:.8s}
+    .contact input,.contact textarea{padding:15px;border-radius:12px;border:1px solid #ccc;font-size:1rem}
+    .contact button{padding:14px;background:#2563eb;color:#fff;border:none;border-radius:30px;font-weight:600;cursor:pointer;transition:.3s}
+    .contact button:hover{background:#1e40af;transform:scale(1.05)}
+    .contact p{text-align:center;margin-top:20px;color:#555}
+
+    /* Footer */
+    footer{background:#111;color:#bbb;text-align:center;padding:25px;font-size:.95rem}
+
+    /* Reveal class */
+    .reveal{opacity:1!important;transform:none!important}
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1>Niyanta Academy</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1 id="typing">Welcome to Niyanta Academy</h1>
+    <p>Empowering Education, Inspiring Futures</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At <strong>Niyanta Academy</strong>, we redefine learning by combining quality education with real-world skills. Our mission is to empower students with knowledge and confidence for a successful future.</p>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses" class="courses">
+    <h2>Our Courses</h2>
+    <div class="course-grid">
+      <div class="course"><h3>Digital Marketing</h3><p>Master SEO, Ads & Social Media strategies.</p></div>
+      <div class="course"><h3>Web Development</h3><p>Learn modern coding and responsive design.</p></div>
+      <div class="course"><h3>Graphic Design</h3><p>Develop creative skills with real projects.</p></div>
+      <div class="course"><h3>Data Analytics</h3><p>Unlock insights with data tools and techniques.</p></div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why" class="why">
+    <h2>Why Choose Us?</h2>
+    <div class="why-grid">
+      <div class="why-item"><h3>Expert Faculty</h3><p>Learn from industry professionals and mentors.</p></div>
+      <div class="why-item"><h3>Hands-on Learning</h3><p>Projects, case studies & practical exposure.</p></div>
+      <div class="why-item"><h3>Career Support</h3><p>Placement assistance and internships.</p></div>
+      <div class="why-item"><h3>Modern Curriculum</h3><p>Up-to-date content for today’s job market.</p></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p>📍 Location: City, India | 📞 +91 98765 43210</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> Niyanta Academy. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Year auto update
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Typing animation
+    const typing = document.getElementById("typing");
+    const text = typing.textContent;
+    typing.textContent = "";
+    let i=0;
+    function typeEffect(){
+      if(i<text.length){
+        typing.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect,70);
+      }
+    }
+    typeEffect();
+
+    // Scroll reveal effect
+    const reveals=document.querySelectorAll(".about p,.course,.why-item,.contact form");
+    window.addEventListener("scroll",()=>{
+      const trigger=window.innerHeight*0.85;
+      reveals.forEach(el=>{
+        const rect=el.getBoundingClientRect();
+        if(rect.top<trigger)el.classList.add("reveal");
+      });
+    });
+    
+    
+  </script>
+</body>
+</html>
+
